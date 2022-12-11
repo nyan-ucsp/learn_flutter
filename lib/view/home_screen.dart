@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/view/home/buttons_view.dart';
 import 'package:learn_flutter/view/home/settings/setting_screen.dart';
 
 import 'home/abc_view.dart';
@@ -113,6 +114,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           if (mounted) setState(() {});
         },
         children: [
+          ButtonViews(),
           HomeView(),
           ABCView(),
         ],
@@ -146,6 +148,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           if (mounted) setState(() {});
         },
         items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.mail_rounded), label: "MAIN"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
           BottomNavigationBarItem(icon: Icon(Icons.abc), label: "ABC"),
         ],
